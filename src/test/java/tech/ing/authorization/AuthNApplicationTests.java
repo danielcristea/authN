@@ -1,4 +1,4 @@
-package tech.ing.authN;
+package tech.ing.authorization;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
