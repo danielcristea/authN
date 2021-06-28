@@ -6,3 +6,8 @@ spring:
   sql:
     init:
       mode: always
+jwt:
+  secret: 'q@7}Z]k7D9#>5M(B`Qu?AJ8'
+
+server:
+  port: 8090
