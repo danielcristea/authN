@@ -8,7 +8,6 @@ import tech.ing.authorization.model.CustomUserDetails;
 import tech.ing.authorization.model.entities.User;
 import tech.ing.authorization.repositories.UserRepository;
 
-import java.util.Optional;
 import java.util.function.Supplier;
 
 @Service

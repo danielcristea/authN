@@ -26,7 +26,7 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 @Slf4j
 public class JWTTokenProvider {
 
-    public static final String TOKEN_ISSUER = "ING Tech";
+    private static final String TOKEN_ISSUER = "ING Tech";
     private static final long EXPIRATION_TIME_IN_MILLISECONDS = 900_000;
 
     @Value("${jwt.secret}")
@@ -38,7 +38,7 @@ public class JWTTokenProvider {
         final Date issuedAt = new Date(System.currentTimeMillis());
         return JWT.create().withIssuer(TOKEN_ISSUER)
                 .withIssuedAt(issuedAt)
-                .withSubject(String.valueOf(customUserDetails.getUser().getId()))
+                .withSubject(String.valueOf(customUserDetails.getUsername()))
                 .withClaim("authorities", claims)
                 .withExpiresAt(new Date(issuedAt.getTime() + EXPIRATION_TIME_IN_MILLISECONDS))
                 .sign(HMAC512(secret.getBytes()));
