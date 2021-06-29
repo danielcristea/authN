@@ -26,4 +26,4 @@ Exposed endpoints:
 --url http://localhost:8090/hello-world \
 --header 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaXNzIjoiSU5HIFRlY2giLCJleHAiOjE2MjQ5MTM2NDUsImlhdCI6MTYyNDkxMjc0NSwiYXV0aG9yaXRpZXMiOlsiUkVBRCJdfQ.minuZ9PJtCKmGmwMcXJ_JdsMdSnxn8gCqXoecpSOo8rmGjhdz1qpLa-Skkoo5-HidDOJF-MwosId32wHA3zXzw'
   
-Run with mvnw clean install
+Generate jar with mvnw clean install
