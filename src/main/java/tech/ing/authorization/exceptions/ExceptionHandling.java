@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.InsufficientAuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -19,6 +20,11 @@ public class ExceptionHandling implements ErrorController {
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<HttpErrorResponse> badCredentialsException() {
+        return createHttpErrorResponse(BAD_REQUEST, "Invalid username / password");
+    }
+
+    @ExceptionHandler(UsernameNotFoundException.class)
+    public ResponseEntity<HttpErrorResponse> usernameNotFoundException() {
         return createHttpErrorResponse(BAD_REQUEST, "Invalid username / password");
     }
 

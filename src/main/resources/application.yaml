@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: authN
   datasource:
     url: jdbc:mysql://localhost/authn?useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
